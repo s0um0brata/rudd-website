@@ -1,0 +1,292 @@
+.mission-vision {
+  position: relative;
+  padding: 100px 0;
+
+  background: #f7faff;
+
+  overflow: hidden;
+}
+
+.mission-vision::before {
+  content: "";
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: -280px;
+  left: -220px;
+
+  border-radius: 50%;
+
+  background: rgba(34, 120, 189, 0.06);
+}
+
+.mission-vision::after {
+  content: "";
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: -220px;
+  bottom: -250px;
+
+  border-radius: 50%;
+
+  background: rgba(13, 27, 56, 0.04);
+}
+
+.mission-vision-container {
+  position: relative;
+  z-index: 1;
+
+  width: min(100% - 40px, 1100px);
+  margin: 0 auto;
+}
+
+.mission-vision-heading {
+  margin-bottom: 55px;
+
+  text-align: center;
+}
+
+.mission-vision-heading span {
+  display: inline-block;
+  margin-bottom: 12px;
+
+  color: #2278bd;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.mission-vision-heading h2 {
+  color: #0d1b38;
+
+  font-size: clamp(32px, 4vw, 44px);
+  line-height: 1.15;
+}
+
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.mission-card {
+  position: relative;
+
+  min-height: 400px;
+
+  padding: 40px;
+
+  border-radius: 24px;
+
+  color: #ffffff;
+
+  overflow: hidden;
+
+  box-shadow: 0 18px 45px rgba(13, 27, 56, 0.12);
+}
+
+.mission-card-1 {
+  background: linear-gradient(
+    135deg,
+    #0d1b38 0%,
+    #153c68 55%,
+    #2278bd 100%
+  );
+}
+
+.mission-card-2 {
+  background: linear-gradient(
+    135deg,
+    #2278bd 0%,
+    #1767a5 50%,
+    #0d1b38 100%
+  );
+}
+
+.mission-card-background {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+}
+
+.mission-card-orbit {
+  position: absolute;
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+
+  border-radius: 50%;
+}
+
+.mission-card-orbit-one {
+  width: 350px;
+  height: 350px;
+
+  right: -160px;
+  top: -150px;
+}
+
+.mission-card-orbit-two {
+  width: 250px;
+  height: 250px;
+
+  right: -80px;
+  top: -100px;
+}
+
+.mission-card-top {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 45px;
+}
+
+.mission-card-icon {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 17px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(8px);
+}
+
+.mission-card-arrow {
+  opacity: 0.7;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.mission-card:hover .mission-card-arrow {
+  opacity: 1;
+  transform: translate(4px, -4px);
+}
+
+.mission-card-label {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+  margin-bottom: 12px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.mission-card h3 {
+  position: relative;
+  z-index: 1;
+
+  max-width: 430px;
+
+  margin-bottom: 18px;
+
+  color: #ffffff;
+
+  font-size: clamp(25px, 3vw, 32px);
+  line-height: 1.2;
+}
+
+.mission-card p {
+  position: relative;
+  z-index: 1;
+
+  max-width: 470px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.mission-card-bottom {
+  position: absolute;
+
+  left: 40px;
+  right: 40px;
+  bottom: 25px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.mission-card-bottom span {
+  color: rgba(255, 255, 255, 0.45);
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .mission-vision {
+    padding: 75px 0;
+  }
+
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-card {
+    min-height: 370px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 540px) {
+  .mission-vision {
+    padding: 65px 0;
+  }
+
+  .mission-vision-container {
+    width: min(100% - 32px, 500px);
+  }
+
+  .mission-vision-heading {
+    margin-bottom: 40px;
+  }
+
+  .mission-card {
+    min-height: 390px;
+    padding: 30px;
+    border-radius: 20px;
+  }
+
+  .mission-card-top {
+    margin-bottom: 38px;
+  }
+
+  .mission-card-bottom {
+    left: 30px;
+    right: 30px;
+  }
+}

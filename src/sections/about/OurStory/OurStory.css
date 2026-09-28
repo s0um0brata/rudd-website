@@ -1,0 +1,522 @@
+.our-story {
+  position: relative;
+
+  width: 100%;
+
+  padding: 105px 0;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+.our-story-container {
+  width: min(100% - 40px, 1200px);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 0.95fr 1.05fr;
+
+  align-items: center;
+
+  gap: 85px;
+}
+
+/* -------------------------------------------------- */
+/* Left content */
+/* -------------------------------------------------- */
+
+.our-story-content {
+  max-width: 560px;
+}
+
+.our-story-label {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: #087de0;
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+}
+
+.our-story-content h2 {
+  margin: 0;
+
+  color: #102d62;
+
+  font-size: clamp(2.2rem, 4vw, 3.25rem);
+
+  line-height: 1.1;
+
+  font-weight: 750;
+
+  letter-spacing: -0.035em;
+}
+
+.our-story-line {
+  width: 70px;
+
+  height: 4px;
+
+  margin: 22px 0 27px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #087de0,
+      #43b7fa
+    );
+}
+
+.our-story-content p {
+  margin: 0 0 17px;
+
+  color: #66758c;
+
+  font-size: 0.96rem;
+
+  line-height: 1.8;
+}
+
+.our-story-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 14px;
+
+  padding: 13px 21px;
+
+  border-radius: 999px;
+
+  background: #087de0;
+
+  color: #ffffff;
+
+  font-size: 0.88rem;
+
+  font-weight: 600;
+
+  box-shadow:
+    0 8px 22px rgba(8, 125, 224, 0.18);
+
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.our-story-button:hover {
+  background: #076bc0;
+
+  box-shadow:
+    0 11px 26px rgba(8, 125, 224, 0.25);
+}
+
+/* -------------------------------------------------- */
+/* Right visual */
+/* -------------------------------------------------- */
+
+.our-story-visual {
+  width: 100%;
+}
+
+.our-story-image {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 390px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(72, 190, 255, 0.4),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #052d72 0%,
+      #0759b0 42%,
+      #078ce7 100%
+    );
+
+  box-shadow:
+    0 22px 55px rgba(12, 76, 143, 0.2);
+}
+
+.our-story-image::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.08),
+      transparent 45%
+    );
+
+  pointer-events: none;
+}
+
+.story-image-glow {
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  left: 50%;
+  top: 50%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(91, 210, 255, 0.35),
+      transparent 68%
+    );
+
+  transform: translate(-50%, -50%);
+
+  filter: blur(5px);
+}
+
+/* -------------------------------------------------- */
+/* Orbit graphics */
+/* -------------------------------------------------- */
+
+.story-orbit {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  border: 1px solid rgba(143, 226, 255, 0.4);
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%) rotate(-20deg);
+}
+
+.story-orbit-one {
+  width: 330px;
+  height: 175px;
+}
+
+.story-orbit-two {
+  width: 360px;
+  height: 205px;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(55deg);
+
+  opacity: 0.65;
+}
+
+/* -------------------------------------------------- */
+/* Center branding */
+/* -------------------------------------------------- */
+
+.story-center {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 125px;
+  height: 125px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #2cb8fa,
+      #086bc4 65%,
+      #05488f
+    );
+
+  border: 2px solid rgba(157, 230, 255, 0.75);
+
+  box-shadow:
+    0 0 35px rgba(70, 196, 255, 0.4),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+
+  transform: translate(-50%, -50%);
+
+  z-index: 4;
+}
+
+.story-center span {
+  color: #ffffff;
+
+  font-size: 1.5rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+.story-center small {
+  margin-top: 2px;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 0.48rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+/* -------------------------------------------------- */
+/* Nodes */
+/* -------------------------------------------------- */
+
+.story-node {
+  position: absolute;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 9px 13px;
+
+  border: 1px solid rgba(147, 226, 255, 0.55);
+
+  border-radius: 999px;
+
+  background: rgba(2, 57, 118, 0.6);
+
+  backdrop-filter: blur(10px);
+
+  color: #ffffff;
+
+  font-size: 0.72rem;
+
+  font-weight: 600;
+
+  box-shadow:
+    0 8px 22px rgba(0, 39, 91, 0.2);
+}
+
+.story-node svg {
+  color: #6ed5ff;
+}
+
+.story-node-one {
+  top: 45px;
+  left: 45px;
+}
+
+.story-node-two {
+  top: 48px;
+  right: 40px;
+}
+
+.story-node-three {
+  bottom: 48px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+/* -------------------------------------------------- */
+/* Journey cards */
+/* -------------------------------------------------- */
+
+.journey-cards {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 12px;
+
+  margin-top: 15px;
+}
+
+.journey-card {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  padding: 16px 13px;
+
+  border: 1px solid #e7eef5;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 7px 20px rgba(21, 71, 116, 0.06);
+
+  transition:
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.journey-card:hover {
+  border-color: rgba(8, 125, 224, 0.22);
+
+  box-shadow:
+    0 12px 26px rgba(21, 71, 116, 0.1);
+}
+
+.journey-card-icon {
+  flex-shrink: 0;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #eaf6ff;
+
+  color: #087de0;
+}
+
+.journey-card h3 {
+  margin: 0 0 3px;
+
+  color: #17376d;
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+}
+
+.journey-card p {
+  margin: 0;
+
+  color: #78879b;
+
+  font-size: 0.65rem;
+
+  line-height: 1.45;
+}
+
+/* -------------------------------------------------- */
+/* Tablet */
+/* -------------------------------------------------- */
+
+@media (max-width: 1000px) {
+  .our-story-container {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .our-story-content {
+    max-width: 700px;
+  }
+
+  .our-story-visual {
+    max-width: 700px;
+  }
+
+  .journey-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* -------------------------------------------------- */
+/* Mobile */
+/* -------------------------------------------------- */
+
+@media (max-width: 650px) {
+  .our-story {
+    padding: 75px 0;
+  }
+
+  .our-story-container {
+    width: min(100% - 32px, 600px);
+
+    gap: 40px;
+  }
+
+  .our-story-content h2 {
+    font-size: 2.25rem;
+  }
+
+  .our-story-content p {
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+  }
+
+  .our-story-image {
+    min-height: 330px;
+
+    border-radius: 22px;
+  }
+
+  .story-orbit-one {
+    width: 280px;
+    height: 145px;
+  }
+
+  .story-orbit-two {
+    width: 305px;
+    height: 170px;
+  }
+
+  .story-node {
+    font-size: 0.65rem;
+
+    padding: 8px 10px;
+  }
+
+  .story-node-one {
+    left: 18px;
+  }
+
+  .story-node-two {
+    right: 18px;
+  }
+
+  .journey-cards {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .journey-card p {
+    font-size: 0.68rem;
+  }
+}

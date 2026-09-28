@@ -1,0 +1,529 @@
+.about-hero {
+  position: relative;
+
+  min-height: 420px;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      105deg,
+      #063d96 0%,
+      #087bdc 42%,
+      #0874d1 65%,
+      #07529e 100%
+    );
+
+  color: #ffffff;
+}
+
+/* -------------------------------------------------- */
+/* Container */
+/* -------------------------------------------------- */
+
+.about-hero-container {
+  position: relative;
+
+  z-index: 20;
+
+  width: min(100% - 40px, 1250px);
+
+  margin: 0 auto;
+
+  padding: 75px 0 90px;
+}
+
+.about-hero-content {
+  width: min(100%, 650px);
+}
+
+/* -------------------------------------------------- */
+/* Text */
+/* -------------------------------------------------- */
+
+.about-hero-label {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.about-hero h1 {
+  margin: 0;
+
+  font-size: clamp(2.5rem, 5vw, 4rem);
+
+  line-height: 1.05;
+
+  font-weight: 750;
+
+  letter-spacing: -0.035em;
+
+  color: #ffffff;
+}
+
+.about-hero h2 {
+  margin: 12px 0 18px;
+
+  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+
+  line-height: 1.35;
+
+  font-weight: 600;
+
+  color: #ffffff;
+}
+
+.about-hero p {
+  width: min(100%, 620px);
+
+  margin: 0;
+
+  font-size: 0.98rem;
+
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.about-hero-accent {
+  height: 4px;
+
+  margin-top: 25px;
+
+  border-radius: 999px;
+
+  background: #5ec6ff;
+}
+
+/* -------------------------------------------------- */
+/* Background glow */
+/* -------------------------------------------------- */
+
+.about-hero-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(10px);
+}
+
+.about-hero-glow-one {
+  width: 550px;
+  height: 550px;
+
+  right: -90px;
+  top: -220px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(71, 190, 255, 0.35),
+      transparent 68%
+    );
+}
+
+.about-hero-glow-two {
+  width: 400px;
+  height: 300px;
+
+  left: 30%;
+  bottom: -200px;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(20, 169, 255, 0.3),
+      transparent 70%
+    );
+}
+
+/* -------------------------------------------------- */
+/* Curved decorative lines */
+/* -------------------------------------------------- */
+
+.about-hero-curve {
+  position: absolute;
+
+  z-index: 4;
+
+  pointer-events: none;
+
+  border: 2px solid rgba(91, 203, 255, 0.5);
+
+  border-left: none;
+  border-bottom: none;
+
+  border-radius: 0 100% 0 0;
+}
+
+.about-hero-curve-one {
+  width: 550px;
+  height: 230px;
+
+  right: -130px;
+  bottom: 40px;
+
+  transform: rotate(-12deg);
+}
+
+.about-hero-curve-two {
+  width: 430px;
+  height: 190px;
+
+  right: -60px;
+  bottom: 10px;
+
+  opacity: 0.55;
+
+  transform: rotate(-12deg);
+}
+
+/* -------------------------------------------------- */
+/* Technology visual */
+/* -------------------------------------------------- */
+
+.about-hero-tech {
+  position: absolute;
+
+  z-index: 8;
+
+  right: 4%;
+
+  top: 50%;
+
+  width: 510px;
+  height: 390px;
+
+  transform: translateY(-50%);
+
+  pointer-events: none;
+}
+
+/* Globe */
+
+.about-hero-globe {
+  position: absolute;
+
+  width: 235px;
+  height: 235px;
+
+  right: 105px;
+  top: 75px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      rgba(95, 207, 255, 0.9),
+      rgba(12, 116, 210, 0.45) 42%,
+      rgba(2, 59, 132, 0.1) 75%
+    );
+
+  border: 1px solid rgba(130, 222, 255, 0.7);
+
+  box-shadow:
+    0 0 50px rgba(51, 186, 255, 0.28),
+    inset 0 0 40px rgba(91, 203, 255, 0.18);
+}
+
+.globe-horizontal,
+.globe-vertical {
+  position: absolute;
+
+  border: 1px solid rgba(150, 228, 255, 0.42);
+
+  border-radius: 50%;
+}
+
+.globe-horizontal-one {
+  inset: 20px 0;
+
+  border-left: none;
+  border-right: none;
+}
+
+.globe-horizontal-two {
+  inset: 65px 0;
+
+  border-left: none;
+  border-right: none;
+}
+
+.globe-vertical-one {
+  inset: 0 60px;
+
+  border-top: none;
+  border-bottom: none;
+}
+
+.globe-vertical-two {
+  inset: 0 105px;
+
+  border-top: none;
+  border-bottom: none;
+}
+
+.globe-center {
+  position: absolute;
+
+  width: 8px;
+  height: 8px;
+
+  left: 50%;
+  top: 50%;
+
+  border-radius: 50%;
+
+  background: #75d6ff;
+
+  box-shadow:
+    0 0 18px #55c8ff;
+
+  transform: translate(-50%, -50%);
+}
+
+/* Orbit */
+
+.about-hero-orbit {
+  position: absolute;
+
+  width: 330px;
+  height: 150px;
+
+  right: 58px;
+  top: 118px;
+
+  border: 1px solid rgba(107, 214, 255, 0.5);
+
+  border-radius: 50%;
+
+  transform: rotate(-28deg);
+}
+
+.orbit-two {
+  width: 380px;
+  height: 175px;
+
+  right: 32px;
+  top: 104px;
+
+  opacity: 0.5;
+
+  transform: rotate(35deg);
+}
+
+/* -------------------------------------------------- */
+/* Technology icons */
+/* -------------------------------------------------- */
+
+.about-tech-icon {
+  position: absolute;
+
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(120, 219, 255, 0.8);
+
+  border-radius: 8px;
+
+  background: rgba(5, 89, 174, 0.45);
+
+  backdrop-filter: blur(8px);
+
+  color: #ffffff;
+
+  box-shadow:
+    0 0 20px rgba(46, 179, 255, 0.2);
+}
+
+.about-tech-icon svg {
+  width: 27px;
+  height: 27px;
+}
+
+.tech-icon-cloud {
+  top: 20px;
+  right: 225px;
+}
+
+.tech-icon-code {
+  top: 5px;
+  right: 85px;
+}
+
+.tech-icon-globe {
+  top: 55px;
+  right: 5px;
+}
+
+.tech-icon-shield {
+  bottom: 50px;
+  right: 10px;
+}
+
+.tech-icon-settings {
+  bottom: 35px;
+  right: 225px;
+}
+
+.tech-icon-mobile {
+  top: 140px;
+  left: 15px;
+}
+
+/* -------------------------------------------------- */
+/* Bottom wave */
+/* -------------------------------------------------- */
+
+.about-hero-bottom-wave {
+  position: absolute;
+
+  z-index: 15;
+
+  left: 0;
+  bottom: -1px;
+
+  width: 100%;
+
+  height: 90px;
+
+  pointer-events: none;
+}
+
+.about-hero-bottom-wave svg {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+.about-hero-bottom-wave path {
+  fill: #ffffff;
+}
+
+/* -------------------------------------------------- */
+/* Tablet */
+/* -------------------------------------------------- */
+
+@media (max-width: 1050px) {
+  .about-hero-tech {
+    right: -80px;
+
+    opacity: 0.75;
+
+    transform:
+      translateY(-50%)
+      scale(0.85);
+  }
+
+  .about-hero-content {
+    width: 600px;
+  }
+}
+
+/* -------------------------------------------------- */
+/* Mobile */
+/* -------------------------------------------------- */
+
+@media (max-width: 800px) {
+  .about-hero {
+    min-height: 540px;
+
+    align-items: flex-start;
+  }
+
+  .about-hero-container {
+    width: min(100% - 32px, 600px);
+
+    padding: 65px 0 100px;
+  }
+
+  .about-hero-content {
+    width: 100%;
+  }
+
+  .about-hero h1 {
+    font-size: 2.45rem;
+  }
+
+  .about-hero h2 {
+    font-size: 1.15rem;
+  }
+
+  .about-hero p {
+    font-size: 0.9rem;
+
+    max-width: 560px;
+  }
+
+  .about-hero-tech {
+    right: -155px;
+    top: 300px;
+
+    opacity: 0.3;
+
+    transform:
+      translateY(-50%)
+      scale(0.65);
+  }
+
+  .about-hero-curve-one {
+    right: -250px;
+  }
+
+  .about-hero-curve-two {
+    right: -220px;
+  }
+
+  .about-hero-bottom-wave {
+    height: 55px;
+  }
+}
+
+/* -------------------------------------------------- */
+/* Small phones */
+/* -------------------------------------------------- */
+
+@media (max-width: 430px) {
+  .about-hero-container {
+    width: min(100% - 28px, 600px);
+  }
+
+  .about-hero h1 {
+    font-size: 2.15rem;
+  }
+
+  .about-hero h2 {
+    font-size: 1.05rem;
+  }
+
+  .about-hero p {
+    font-size: 0.85rem;
+  }
+
+  .about-hero-tech {
+    right: -205px;
+
+    opacity: 0.22;
+  }
+}
