@@ -1,0 +1,289 @@
+.services-cta {
+  position: relative;
+  padding: 22px 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.services-cta-container {
+  position: relative;
+  width: min(100% - 68px, 1200px);
+  min-height: 105px;
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns: 30% 70%;
+  align-items: center;
+
+  overflow: hidden;
+
+  border: 1px solid #cfe6f7;
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      105deg,
+      #dff2ff 0%,
+      #eef8ff 46%,
+      #d9efff 100%
+    );
+
+  box-shadow: 0 5px 18px rgba(20, 100, 160, 0.08);
+}
+
+.services-cta-container::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      transparent 45%,
+      rgba(0, 128, 220, 0.07) 46%,
+      transparent 47%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 55%,
+      rgba(0, 128, 220, 0.05) 56%,
+      transparent 57%
+    );
+
+  background-size: 100px 100px;
+  pointer-events: none;
+}
+
+/* Visual */
+
+.services-cta-visual {
+  position: relative;
+  height: 105px;
+  overflow: hidden;
+}
+
+.services-cta-glow {
+  position: absolute;
+
+  width: 170px;
+  height: 170px;
+
+  left: 45px;
+  top: -35px;
+
+  border-radius: 50%;
+
+  background: rgba(20, 159, 235, 0.13);
+  filter: blur(20px);
+}
+
+.services-cta-device {
+  position: absolute;
+
+  left: 75px;
+  bottom: -5px;
+
+  width: 105px;
+  height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #147ed0;
+
+  border: 5px solid #729bb8;
+  border-bottom-width: 8px;
+  border-radius: 7px;
+
+  background: linear-gradient(
+    145deg,
+    #f9fdff,
+    #d4e9f7
+  );
+
+  box-shadow: 0 8px 18px rgba(36, 94, 133, 0.18);
+
+  transform: perspective(500px) rotateY(10deg);
+}
+
+.services-cta-device::after {
+  content: "";
+
+  position: absolute;
+
+  width: 125px;
+  height: 7px;
+
+  left: -15px;
+  bottom: -13px;
+
+  border-radius: 50%;
+
+  background: #7e9db3;
+}
+
+.services-cta-decoration {
+  position: absolute;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(0, 143, 224, 0.25);
+}
+
+.decoration-one {
+  width: 130px;
+  height: 130px;
+  left: -45px;
+  top: -55px;
+}
+
+.decoration-two {
+  width: 90px;
+  height: 90px;
+  left: 25px;
+  bottom: -50px;
+}
+
+.decoration-three {
+  width: 55px;
+  height: 55px;
+  right: 8%;
+  top: -28px;
+}
+
+/* Content */
+
+.services-cta-content {
+  position: relative;
+  z-index: 2;
+
+  padding: 18px 30px;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto;
+  column-gap: 18px;
+  align-items: center;
+}
+
+.services-cta-label {
+  grid-column: 1 / -1;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-bottom: 2px;
+
+  color: #0c70c2;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+}
+
+.services-cta-label span:first-child {
+  width: 24px;
+  height: 4px;
+
+  border-radius: 999px;
+
+  background: #147ed2;
+}
+
+.services-cta-content h2 {
+  margin: 0;
+
+  color: #073d82;
+
+  font-size: clamp(22px, 2.5vw, 31px);
+  line-height: 1.1;
+  letter-spacing: -0.7px;
+}
+
+.services-cta-content p {
+  margin: 5px 0 0;
+
+  color: #46749a;
+
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.services-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 11px 19px;
+
+  border-radius: 999px;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #08aaff,
+    #1475ee
+  );
+
+  font-size: 12px;
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  box-shadow: 0 7px 20px rgba(0, 126, 225, 0.2);
+}
+
+/* Tablet */
+
+@media (max-width: 850px) {
+  .services-cta-container {
+    grid-template-columns: 1fr;
+    width: min(100% - 40px, 700px);
+  }
+
+  .services-cta-visual {
+    display: none;
+  }
+
+  .services-cta-content {
+    padding: 24px 25px;
+    grid-template-columns: 1fr auto;
+  }
+
+  .services-cta-label {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .services-cta {
+    padding: 18px 0;
+  }
+
+  .services-cta-container {
+    width: min(100% - 32px, 600px);
+  }
+
+  .services-cta-content {
+    display: block;
+    padding: 25px 20px;
+  }
+
+  .services-cta-content h2 {
+    font-size: 25px;
+  }
+
+  .services-cta-content p {
+    margin-top: 8px;
+  }
+
+  .services-cta-button {
+    margin-top: 15px;
+  }
+}

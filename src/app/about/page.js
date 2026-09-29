@@ -9,7 +9,6 @@ import OurTeam from "@/sections/about/OurTeam/OurTeam";
 export default function AboutPage() {
   return (
     <main>
-      <Navbar />
       <AboutHero />
       <OurStory />
       <AboutStats />

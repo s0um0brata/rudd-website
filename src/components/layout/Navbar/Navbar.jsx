@@ -22,6 +22,14 @@ const navLinks = [
     href: "/services",
   },
   {
+    label: "Why Us",
+    href:"/why-us",
+  },
+  {
+    label:"Careers",
+    href:"/careers"
+  },
+  {
     label: "Contact",
     href: "/contact",
   },
