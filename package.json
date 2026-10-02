@@ -10,7 +10,12 @@
   },
   "dependencies": {
     "@syncfusion/ej2-base": "^34.2.8",
+    "@syncfusion/ej2-buttons": "^35.1.37",
+    "@syncfusion/ej2-navigations": "^35.1.37",
+    "@syncfusion/ej2-popups": "^35.1.37",
     "@syncfusion/ej2-react-base": "^34.2.8",
+    "@syncfusion/ej2-react-buttons": "^35.1.37",
+    "@syncfusion/ej2-react-navigations": "^35.1.37",
     "lucide-react": "^1.48.0",
     "motion": "^13.4.4",
     "next": "16.3.6",
